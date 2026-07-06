@@ -1,0 +1,10 @@
+listen-address: "0.0.0.0:8080"
+endpoint-config:
+  /api/workflow/tenant-doctor/security-advisory-report/webhook:
+    remote: http://127.0.0.1:8000/
+    # remote: https://agentz.accuknox.com/
+    send-query-params: true
+    only-send-defined-fields: true
+    content-body:
+      "ContainerName": "ContainerName"
+      "ProcessName": "ProcessName"
