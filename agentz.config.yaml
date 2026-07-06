@@ -1,0 +1,21 @@
+listen-address: "0.0.0.0:8080"
+endpoint-config:
+  /api/workflow/tenant-doctor/kubearmor-alert-investigation/webhook:
+    remote: https://agentz.accuknox.com/
+    send-query-params: true
+    only-send-defined-fields: true
+    content-body:
+      "NamespaceName": "NamespaceName"
+      "PodName": "PodName"
+      "Labels": "Labels"
+      "ContainerName": "ContainerName"
+      "ContainerImage": "ContainerImage"
+      "UID": "UID"
+      "ParentProcessName": "ParentProcessName"
+      "ProcessName": "ProcessName"
+      "Resource": "Resource"
+      "Operation": "Operation"
+      "Source": "Source"
+      "PolicyName": "PolicyName"
+      "Message": "Message"
+      "Result": "Result"
